@@ -20,8 +20,7 @@ Fixes include:
     minikube config set memory 8192
     minikube config set cpus 4
 
-## Second Note, if you have less than 8GB memory (physical) in your machine don't waste your
-time, it will not work.
+## Second Note, if you have less than 8GB memory (physical) in your machine don't waste your time, it will not work.
 
 Launch:
 
