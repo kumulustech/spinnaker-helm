@@ -16,8 +16,8 @@ Fixes include:
 
 Note: If you use minikube, increase the memory, and if you have them, the available CPUs:
 
-minikube config set memory 6144
-minikube config set cpus 4
+  minikube config set memory 6144
+  minikube config set cpus 4
 
 Launch:
 
