@@ -35,6 +35,7 @@ kubectl create -f rbac.yaml
 3) Launch Spinnaker (and minio, redis, jenkins)
 
     git clone https://github.com/kumulustech/spinnaker-helm spinnaker
+    
     helm install --name spinnaker spinnaker/ --timeout 500
 
 Then follow the output of the helm install.
