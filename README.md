@@ -15,12 +15,12 @@ Fixes include:
  - redis password naming for spinnaker config and redis
 
 
-## Note: If you use minikube, increase the memory, and if you have them, the available CPUs:
+### Note: If you use minikube, increase the memory, and if you have them, the available CPUs:
 
     minikube config set memory 8192
     minikube config set cpus 4
 
-## Second Note, if you have less than 8GB memory (physical) in your machine don't waste your time, it will not work.
+### Second Note, if you have less than 8GB memory (physical) in your machine don't waste your time, it will not work.
 
 Launch:
 
@@ -34,7 +34,7 @@ kubectl create -f rbac.yaml
 
 3) Launch Spinnaker (and minio, redis, jenkins)
 
-git clone https://github.com/kumulustech/spinnaker-helm spinnaker
-helm install --name spinnaker spinnaker/ --timeout 500
+    git clone https://github.com/kumulustech/spinnaker-helm spinnaker
+    helm install --name spinnaker spinnaker/ --timeout 500
 
 Then follow the output of the helm install.
