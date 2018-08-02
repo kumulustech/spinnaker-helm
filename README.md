@@ -21,21 +21,29 @@ Fixes include:
     minikube config set cpus 4
 
 ### Second Note, if you have less than 8GB memory (physical) in your machine don't waste your time, it will not work.
+Gitclone the lab repo:
+
+git clone https://github.com/kumulustech/spinnaker-helm spinnaker
+
+cd spinnaker
 
 Launch:
 
 1) Install helm:
 
-helm init --upgrade
+    helm init --upgrade
 
 2) Install RBAC rules:
 
-kubectl create -f rbac.yml
+    kubectl create -f rbac.yml
 
 3) Launch Spinnaker (and minio, redis, jenkins)
-
-    git clone https://github.com/kumulustech/spinnaker-helm spinnaker
     
     helm install --name spinnaker spinnaker/ --timeout 500
-
+    
+    Note: In some cases, (ie. on a laptop) when using Minikube, you may get an "Error: Transport is closing" message at this point as Tiller times out before Helm is able to complete the installation. In this case, delete minikube, start minikube and run: 
+    
+    helm init --force-upgrade --tiller-image powerhome/tiller:git-3b22ecd
+    
+    
 Then follow the output of the helm install.
