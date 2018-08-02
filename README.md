@@ -30,7 +30,7 @@ helm init --upgrade
 
 2) Install RBAC rules:
 
-kubectl create -f rbac.yaml
+kubectl create -f rbac.yml
 
 3) Launch Spinnaker (and minio, redis, jenkins)
 
