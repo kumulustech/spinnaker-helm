@@ -39,6 +39,7 @@ Launch:
     kubectl create -f rbac.yml
 
 3) Launch Spinnaker (and minio, redis, jenkins)
+    Note: If you get "Error: could not find a ready tiller pod" wait a minute and try run the command again.
     
     helm install --name spinnaker spinnaker/ --timeout 500
     
