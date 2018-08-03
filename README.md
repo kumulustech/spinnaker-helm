@@ -41,7 +41,7 @@ Launch:
 3) Launch Spinnaker (and minio, redis, jenkins)
     Note: If you get "Error: could not find a ready tiller pod" wait a minute and try run the command again.
     
-    helm install --name spinnaker spinnaker/ --timeout 500
+    helm install --name spinnaker spinnaker/
     
     Note: In some cases, (ie. on a laptop) when using Minikube, you may get an "Error: Transport is closing" message at this point as Tiller times out before Helm is able to complete the installation. In this case, delete minikube, start minikube and run: 
     
@@ -68,4 +68,4 @@ kubectl get secrets
 
 Now rerun 
 
-helm install --name spinnaker spinnaker/ --timeout 500
+helm install --name spinnaker spinnaker/
