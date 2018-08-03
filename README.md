@@ -52,7 +52,7 @@ Then follow the output of the helm install.
 
 =================================================
 
-###Restarting a failed Spinnaker deployment.
+### Restarting a failed Spinnaker deployment.
 In some cases, you may end up with a deployment that has some microservices (pods) in an error state after your deployment has completed. 
 In this case you will want to run:
 
