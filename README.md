@@ -66,6 +66,7 @@ and that the only secret present is the kubernetes default token  (Type:kubernet
 
 kubectl get secrets
 
+Delete any extra PVCs or secrets.
 Now rerun 
 
 helm install --name spinnaker spinnaker/
