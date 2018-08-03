@@ -53,7 +53,7 @@ Then follow the output of the helm install.
 =================================================
 
 ### Restarting a failed Spinnaker deployment.
-In some cases, you may end up with a deployment that has some microservices (pods) in an error state after your deployment has completed. 
+In some cases, you may end up with a deployment that has some microservices (pods) in an error state after your deployment has completed. (e.g. "Error: timed out waiting for the condition") 
 In this case you will want to run:
 
 helm del --purge spinnaker
