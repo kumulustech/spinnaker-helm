@@ -49,3 +49,23 @@ Launch:
     
     
 Then follow the output of the helm install.
+
+=================================================
+
+###Restarting a failed Spinnaker deployment.
+In some cases, you may end up with a deployment that has some microservices (pods) in an error state after your deployment has completed. 
+In this case you will want to run:
+
+helm del --purge spinnaker
+
+Before redeploying Spinnaker with Helm, check that your environment is cleaned up. In particular, check that there are no PVCs present
+
+kubectl get pvc
+
+and that the only secret present is the kubernetes default token  (Type:kubernetes.io/service-account-token) 
+
+kubectl get secrets
+
+Now rerun 
+
+helm install --name spinnaker spinnaker/ --timeout 500
