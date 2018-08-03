@@ -21,7 +21,7 @@ Fixes include:
     minikube config set disk-size 30GB
     minikube config set cpus 4
 
-### Second Note, if you have less than 8GB memory (physical) in your machine don't waste your time, it will not work.
+### Second Note, if you have less than 12GB memory (physical) in your machine don't waste your time, it will not work.
 Gitclone the lab repo:
 
 git clone https://github.com/kumulustech/spinnaker-helm spinnaker
@@ -42,11 +42,6 @@ Launch:
     Note: If you get "Error: could not find a ready tiller pod" wait a minute and try run the command again.
     
     helm install --name spinnaker spinnaker/
-    
-    Note: In some cases, (ie. on a laptop) when using Minikube, you may get an "Error: Transport is closing" message at this point as Tiller times out before Helm is able to complete the installation. In this case, delete minikube, start minikube and run: 
-    
-    helm init --force-upgrade --tiller-image powerhome/tiller:git-3b22ecd
-    
     
 Then follow the output of the helm install.
 
