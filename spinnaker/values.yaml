@@ -12,6 +12,7 @@ accounts:
     - library/ubuntu
     - library/centos
     - library/nginx
+    - rstarmer/ruby-hw
 # - name: gcr
 #   address: https://gcr.io
 #   username: _json_key
